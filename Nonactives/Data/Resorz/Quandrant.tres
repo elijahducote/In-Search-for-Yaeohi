@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="QuadrantRegion" load_steps=2 format=3 uid="uid://bowlvwg024ebr"]
+
+[ext_resource type="Script" path="res://Nonactives/Data/Generx/Classes/QuadrantRegion.gd" id="1_t3je3"]
+
+[resource]
+script = ExtResource("1_t3je3")
+direction = 0

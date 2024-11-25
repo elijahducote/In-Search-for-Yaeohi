@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1hxdk5hncsaw"]
+
+[ext_resource type="Script" path="res://Dynamo (Actives)/Global/Base.cpp" id="1_eggqv"]
+[ext_resource type="Script" path="res://Nonactives/Objex/LevL/menu.cpp" id="2_8vb00"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eggqv")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_8vb00")

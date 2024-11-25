@@ -1,0 +1,4 @@
+*
+!.gitignore
+!godot_downloader.sh
+!make sure curl is installed!.txt

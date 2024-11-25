@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://cixbxanm8cxkp"]
+
+[ext_resource type="Script" path="res://Dynamo (Actives)/UI/Dialog/ShapeDrawer.cs" id="1_7ip2c"]
+[ext_resource type="Texture2D" uid="uid://badfnx274ibwv" path="res://Visual/Spryt/1k/Azuria_Dialog.png" id="2_6ton2"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/UI/Dialog/Sprite2D.cs" id="3_ivhke"]
+[ext_resource type="FontFile" uid="uid://cfqw7383us1iv" path="res://Visual/Typografi/Public_Pixel/PublicPixel.otf" id="4_ilosn"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/UI/Dialog/Label.cs" id="5_unjoa"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/UI/Dialog/Polygon2D.cs" id="6_qvjua"]
+[ext_resource type="Texture2D" uid="uid://cqthpy6fkkxx3" path="res://Visual/Spryt/1k/Primrose.png" id="7_4j66e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynpl4"]
+line_spacing = 12.0
+font = ExtResource("4_ilosn")
+font_size = 24
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0.321569, 0.321569, 0.321569, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="Base" type="Node2D"]
+script = ExtResource("1_7ip2c")
+
+[node name="Dialog" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_6ton2")
+centered = false
+script = ExtResource("3_ivhke")
+
+[node name="Container" type="VBoxContainer" parent="."]
+texture_filter = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 480.0
+offset_bottom = 96.0
+size_flags_vertical = 3
+
+[node name="Message" type="Label" parent="Container"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+size_flags_horizontal = 4
+text = " Chris!
+ I am not of your ilk.
+ But a quick brown fox."
+label_settings = SubResource("LabelSettings_ynpl4")
+script = ExtResource("5_unjoa")
+
+[node name="Portrait" type="Polygon2D" parent="."]
+texture_filter = 4
+texture_repeat = 2
+color = Color(0, 0, 0, 0)
+antialiased = true
+script = ExtResource("6_qvjua")
+
+[node name="Still" type="Sprite2D" parent="Portrait"]
+texture_filter = 1
+texture = ExtResource("7_4j66e")
+centered = false

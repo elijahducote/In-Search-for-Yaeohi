@@ -1,0 +1,18 @@
+{
+  "packages": [
+    {
+      "pkgDestination": "res://Jenova/Packages/GodotSDK-4.3.05",
+      "pkgHash": "9c4e76159659974f3249456534dcda4d",
+      "pkgName": "Godot SDK 4.3.05 for Jenova",
+      "pkgType": 1,
+      "pkgVersion": "4.3.05 (x64)"
+    },
+    {
+      "pkgDestination": "res://Jenova/Packages/JenovaMSVCCompiler-14.41.34120",
+      "pkgHash": "0b9511b5bbc045f783d34c535f59989b",
+      "pkgName": "Microsoft Visual C++ 14.41.34120 Compiler for Jenova",
+      "pkgType": 0,
+      "pkgVersion": "14.41.34120 (x64)"
+    }
+  ]
+}

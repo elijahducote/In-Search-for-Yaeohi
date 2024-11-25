@@ -1,0 +1,164 @@
+[gd_scene load_steps=27 format=3 uid="uid://bi3b1kc8auk67"]
+
+[ext_resource type="Script" path="res://Dynamo (Actives)/Player/ControlScheme.cs" id="1_dm4yg"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/Player/Trellis.gd" id="2_p5qkx"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/UI/QuadrantUI.gd" id="3_fcffi"]
+[ext_resource type="Script" path="res://Nonactives/Data/Generx/Classes/QuadrantRegion.gd" id="4_75gse"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/Quadrant.gd" id="5_aa4nr"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/QuadrantB.gd" id="6_0842t"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/QuadrantC.gd" id="7_7j0lk"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/QuadrantD.gd" id="8_fqy0c"]
+[ext_resource type="Script" path="res://Dynamo (Actives)/Player/Controller.gd" id="9_phynb"]
+[ext_resource type="Resource" uid="uid://bcu0ej1m4befk" path="res://Nonactives/Data/Resorz/Primrose.tres" id="10_oy3n3"]
+[ext_resource type="Texture2D" uid="uid://b0k3g8oj8rsac" path="res://Visual/Kinematx/1k/TestAnim/0.png" id="11_d0mxj"]
+[ext_resource type="Texture2D" uid="uid://djhbyy8rjry77" path="res://Visual/Kinematx/1k/TestAnim/1.png" id="12_3g3qg"]
+[ext_resource type="Texture2D" uid="uid://ei3v6qh5hkt4" path="res://Visual/Kinematx/1k/TestAnim/2.png" id="13_fxduk"]
+[ext_resource type="Texture2D" uid="uid://bofpv1jhndl50" path="res://Visual/Kinematx/1k/TestAnim/3.png" id="14_gyj4p"]
+[ext_resource type="Texture2D" uid="uid://dexwnqfc2sbgq" path="res://Visual/Kinematx/1k/TestAnim/4.png" id="15_u5fnu"]
+[ext_resource type="Texture2D" uid="uid://cpiqn25dhdrnj" path="res://Visual/Kinematx/1k/TestAnim/5.png" id="16_1lchg"]
+[ext_resource type="Texture2D" uid="uid://dfumupceolrq" path="res://Visual/Kinematx/1k/TestAnim/6.png" id="17_a8ciu"]
+
+[sub_resource type="Resource" id="Resource_xuhf1"]
+script = ExtResource("4_75gse")
+direction = 0
+
+[sub_resource type="Resource" id="Resource_37hao"]
+script = ExtResource("4_75gse")
+direction = 1
+
+[sub_resource type="Resource" id="Resource_h83jp"]
+script = ExtResource("4_75gse")
+direction = 2
+
+[sub_resource type="Resource" id="Resource_ik1m4"]
+script = ExtResource("4_75gse")
+direction = 3
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8c4co"]
+size = Vector2(6, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ltkv"]
+size = Vector3(6, 0, 6)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xri8m"]
+friction = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_piasp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guwbt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_d0mxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3g3qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fxduk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gyj4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_u5fnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lchg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_a8ciu")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 12.0
+}]
+
+[node name="Root" type="Node3D"]
+script = ExtResource("1_dm4yg")
+
+[node name="CoordGrid" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0.15)
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_p5qkx")
+
+[node name="QuadrantRight" type="ColorRect" parent="CoordGrid" groups=["Trellis"]]
+layout_mode = 0
+color = Color(0.577771, 0.700069, 0.964854, 1)
+script = ExtResource("3_fcffi")
+resource = SubResource("Resource_xuhf1")
+
+[node name="QuadrantLeft" type="ColorRect" parent="CoordGrid" groups=["Trellis"]]
+layout_mode = 0
+color = Color(0.385454, 0.802183, 0.461351, 1)
+script = ExtResource("3_fcffi")
+resource = SubResource("Resource_37hao")
+
+[node name="QuadrantTop" type="ColorRect" parent="CoordGrid" groups=["Trellis"]]
+layout_mode = 0
+color = Color(0.909804, 0.576471, 0.301961, 1)
+script = ExtResource("3_fcffi")
+resource = SubResource("Resource_h83jp")
+
+[node name="QuadrantBottom" type="ColorRect" parent="CoordGrid" groups=["Trellis"]]
+layout_mode = 0
+script = ExtResource("3_fcffi")
+resource = SubResource("Resource_ik1m4")
+
+[node name="Polygon2D" type="Polygon2D" parent="CoordGrid"]
+visible = false
+script = ExtResource("5_aa4nr")
+
+[node name="Polygon2D2" type="Polygon2D" parent="CoordGrid"]
+visible = false
+script = ExtResource("6_0842t")
+
+[node name="Polygon2D3" type="Polygon2D" parent="CoordGrid"]
+visible = false
+script = ExtResource("7_7j0lk")
+
+[node name="Polygon2D4" type="Polygon2D" parent="CoordGrid"]
+visible = false
+script = ExtResource("8_fqy0c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("PlaneMesh_8c4co")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_0ltkv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.246575, 1.5)
+
+[node name="Player" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0027195, 0)
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+mass = 3.33
+physics_material_override = SubResource("PhysicsMaterial_xri8m")
+sleeping = true
+linear_velocity = Vector3(0, -1.52923e-05, 0)
+script = ExtResource("9_phynb")
+chara = ExtResource("10_oy3n3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_piasp")
+
+[node name="Primrose" type="AnimatedSprite3D" parent="Player"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+offset = Vector2(0, 148)
+billboard = 2
+double_sided = false
+texture_filter = 4
+sprite_frames = SubResource("SpriteFrames_guwbt")
+animation = &"jump"

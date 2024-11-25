@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://cwacdg2eqa6my"]
+
+[ext_resource type="Script" path="res://Nonactives/Data/Generx/Classes/Character.gd" id="1_vnhb3"]
+
+[resource]
+script = ExtResource("1_vnhb3")
+length = 0.0
