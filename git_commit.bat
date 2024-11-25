@@ -32,7 +32,7 @@ if %errorlevel% neq 0 (
     %GIT_EXEC% -c "git commit -m 'Source'"
     
     :: Push to remote origin
-    %GIT_EXEC% -c "git push -f origin main"
+    %GIT_EXEC% -c "git push origin main"
 ) else (
     echo No changes to commit.
 )
