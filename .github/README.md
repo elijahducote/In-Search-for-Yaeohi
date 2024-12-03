@@ -12,7 +12,7 @@
 - [x] (1/4%)**\*\*** <ins>Discovery phase?</ins>
 - [ ] (0/4%) <ins>Playable state?</ins>
 - [x] (1/4%)**\*\*** <ins>Has an art direction?</ins> (By Yukikessho & ElijahD)
-- [x] (1/4%)**\*\*** <ins>Collaboration?</ins> (@quantumchemist,
+- [x] (1/4%)**\*\*** <ins>Collaboration?</ins> ([@QuantumChemist](https://github.com/QuantumChemist),
                                      Yukikessho,
                                      Luminartity)
 - [x] (2/4%)**\*\*** <ins>Story?</ins> (By Alendrone Games)
