@@ -7,10 +7,10 @@
 
 ## Progress Tracker
 
-- [] (0/4%) <ins>Full release?</ins>
-- [] (0/4%) Demo phase?
+- [ ] (0/4%) <ins>Full release?</ins>
+- [ ] (0/4%) Demo phase?
 - [x] (1/4%)**\*\*** <ins>Discovery phase?</ins>
-- [] (0/4%) <ins>Playable state?</ins>
+- [ ] (0/4%) <ins>Playable state?</ins>
 - [x] (1/4%)**\*\*** <ins>Has an art direction?</ins> (By Yukikessho & ElijahD)
 - [x] (1/4%)**\*\*** <ins>Collaboration?</ins> (@QuantumChemist,
                                      Yukikessho,
