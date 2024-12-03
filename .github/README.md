@@ -5,12 +5,26 @@
 
 ---
 
+## Progress Tracker
+
+- [] (0/4%) <ins>Full release?</ins>
+- [] (0/4%) Demo phase?
+- [x] (1/4%)**\*\*** <ins>Discovery phase?</ins>
+- [] (0/4%) <ins>Playable state?</ins>
+- [x] (1/4%)**\*\*** <ins>Has an art direction?</ins> (By Yukikessho & ElijahD)
+- [x] (1/4%)**\*\*** <ins>Collaboration?</ins> (@QuantumChemist,
+                                     Yukikessho,
+                                     Luminartity)
+- [x] (2/4%)**\*\*** Story? (By Alendrone Games)
+
+---
+
 ## Attributions
 
 - [**Godot**](https://github.com/godotengine) **(game engine)**
 - [**Jenova™**](https://github.com/Jenova-Framework) **(C++ framework)**
 - **Alendrone Games** __(developer(__***s***__)*)*__
-#### Especial Thankyous 
+### Especial Thankyous 
      William Candy (Inspirations)
      Crimson Legend (Inspirations)
      Luminarity (Creator of Moxy/Moxhi)
@@ -20,7 +34,7 @@
 
 
 # [In Search for Yaeohi](https://game.trifect.show)
-## (Trifect Series)
+**(Trifect Series)**
 
 A __2.5D adventure game__ that takes a snapshot into **4,051 years ago** ***from the*** ***year 2038***.
 
@@ -31,9 +45,8 @@ The AZURIAN people that inhabited the region were responsible for the _EXTINCTIO
 
 Play together as ***Primrose, Moxhi, and Laggas,*** each possessing abilities to afflict upon this age-old wound that's __been unable to bleed.__
 
-#### The question remains with you.
-
-#### Will you consume nature, or grant nature's eternal wish to grow past maturity, and leave you behind?
+> ***The question remains with you.***
+> "Will you consume nature, or grant nature's eternal wish to grow past maturity, and leave you behind?"
 
 ---
 
