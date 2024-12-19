@@ -4,3 +4,4 @@
 .git/
 .env/
 Git/
+*.lnk
