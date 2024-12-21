@@ -1,14 +1,13 @@
 [gd_scene load_steps=27 format=3 uid="uid://bi3b1kc8auk67"]
 
-[ext_resource type="Script" path="res://Dynamo (Actives)/Player/ControlScheme.cs" id="1_dm4yg"]
-[ext_resource type="Script" path="res://Dynamo (Actives)/Player/Trellis.gd" id="2_p5qkx"]
-[ext_resource type="Script" path="res://Dynamo (Actives)/UI/QuadrantUI.gd" id="3_fcffi"]
-[ext_resource type="Script" path="res://Nonactives/Data/Generx/Classes/QuadrantRegion.gd" id="4_75gse"]
-[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/Quadrant.gd" id="5_aa4nr"]
-[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/QuadrantB.gd" id="6_0842t"]
-[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/QuadrantC.gd" id="7_7j0lk"]
-[ext_resource type="Script" path="res://Dynamo (Actives)/Unsorted/QuadrantD.gd" id="8_fqy0c"]
-[ext_resource type="Script" path="res://Dynamo (Actives)/Player/Controller.gd" id="9_phynb"]
+[ext_resource type="Script" uid="uid://dd3qwvjgdlxcq" path="res://Dynamo (Actives)/Player/Trellis.gd" id="2_p5qkx"]
+[ext_resource type="Script" uid="uid://cbjybrflh7ko5" path="res://Dynamo (Actives)/UI/QuadrantUI.gd" id="3_fcffi"]
+[ext_resource type="Script" uid="uid://dpjs7yhdr7xfh" path="res://Nonactives/Data/Generx/Classes/QuadrantRegion.gd" id="4_75gse"]
+[ext_resource type="Script" uid="uid://jjj4bppbn8ou" path="res://Dynamo (Actives)/Unsorted/Quadrant.gd" id="5_aa4nr"]
+[ext_resource type="Script" uid="uid://dbeqdwrnke7t7" path="res://Dynamo (Actives)/Unsorted/QuadrantB.gd" id="6_0842t"]
+[ext_resource type="Script" uid="uid://bwp1gry56jw6w" path="res://Dynamo (Actives)/Unsorted/QuadrantC.gd" id="7_7j0lk"]
+[ext_resource type="Script" uid="uid://dkfufscmk7es1" path="res://Dynamo (Actives)/Unsorted/QuadrantD.gd" id="8_fqy0c"]
+[ext_resource type="Script" uid="uid://dlbqfhqlajpp4" path="res://Dynamo (Actives)/Player/Controller.gd" id="9_phynb"]
 [ext_resource type="Resource" uid="uid://bcu0ej1m4befk" path="res://Nonactives/Data/Resorz/Primrose.tres" id="10_oy3n3"]
 [ext_resource type="Texture2D" uid="uid://b0k3g8oj8rsac" path="res://Visual/Kinematx/1k/TestAnim/0.png" id="11_d0mxj"]
 [ext_resource type="Texture2D" uid="uid://djhbyy8rjry77" path="res://Visual/Kinematx/1k/TestAnim/1.png" id="12_3g3qg"]
@@ -17,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dexwnqfc2sbgq" path="res://Visual/Kinematx/1k/TestAnim/4.png" id="15_u5fnu"]
 [ext_resource type="Texture2D" uid="uid://cpiqn25dhdrnj" path="res://Visual/Kinematx/1k/TestAnim/5.png" id="16_1lchg"]
 [ext_resource type="Texture2D" uid="uid://dfumupceolrq" path="res://Visual/Kinematx/1k/TestAnim/6.png" id="17_a8ciu"]
+[ext_resource type="Script" uid="uid://b0arcwegmrspe" path="res://Nonactives/Objex/LevL/primrose.gd" id="17_vwaaq"]
 
 [sub_resource type="Resource" id="Resource_xuhf1"]
 script = ExtResource("4_75gse")
@@ -72,10 +72,29 @@ animations = [{
 "loop": false,
 "name": &"jump",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_d0mxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fxduk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d0mxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_a8ciu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d0mxj")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 12.0
 }]
 
 [node name="Root" type="Node3D"]
-script = ExtResource("1_dm4yg")
 
 [node name="CoordGrid" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0.15)
@@ -151,14 +170,15 @@ script = ExtResource("9_phynb")
 chara = ExtResource("10_oy3n3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0394236, 0.41832, 0.191171)
 shape = SubResource("BoxShape3D_piasp")
 
 [node name="Primrose" type="AnimatedSprite3D" parent="Player"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(0.19984, 0, -0.150213, 0, 0.25, 0, 0.150213, 0, 0.19984, 0.0394236, -0.0816802, 0.191171)
 offset = Vector2(0, 148)
 billboard = 2
 double_sided = false
 texture_filter = 4
 sprite_frames = SubResource("SpriteFrames_guwbt")
-animation = &"jump"
+animation = &"walk"
+script = ExtResource("17_vwaaq")
