@@ -1,13 +1,13 @@
-[gd_scene load_steps=27 format=3 uid="uid://bi3b1kc8auk67"]
+[gd_scene load_steps=26 format=3 uid="uid://bi3b1kc8auk67"]
 
-[ext_resource type="Script" uid="uid://dd3qwvjgdlxcq" path="res://Dynamo (Actives)/Player/Trellis.gd" id="2_p5qkx"]
-[ext_resource type="Script" uid="uid://cbjybrflh7ko5" path="res://Dynamo (Actives)/UI/QuadrantUI.gd" id="3_fcffi"]
-[ext_resource type="Script" uid="uid://dpjs7yhdr7xfh" path="res://Nonactives/Data/Generx/Classes/QuadrantRegion.gd" id="4_75gse"]
-[ext_resource type="Script" uid="uid://jjj4bppbn8ou" path="res://Dynamo (Actives)/Unsorted/Quadrant.gd" id="5_aa4nr"]
-[ext_resource type="Script" uid="uid://dbeqdwrnke7t7" path="res://Dynamo (Actives)/Unsorted/QuadrantB.gd" id="6_0842t"]
-[ext_resource type="Script" uid="uid://bwp1gry56jw6w" path="res://Dynamo (Actives)/Unsorted/QuadrantC.gd" id="7_7j0lk"]
-[ext_resource type="Script" uid="uid://dkfufscmk7es1" path="res://Dynamo (Actives)/Unsorted/QuadrantD.gd" id="8_fqy0c"]
-[ext_resource type="Script" uid="uid://dlbqfhqlajpp4" path="res://Dynamo (Actives)/Player/Controller.gd" id="9_phynb"]
+[ext_resource type="Script" uid="uid://cojh5lge78qba" path="res://Dynamo (Actives)/Player/Trellis.gd" id="2_p5qkx"]
+[ext_resource type="Script" uid="uid://d1l4w3ij2w8uw" path="res://Dynamo (Actives)/UI/QuadrantUI.gd" id="3_fcffi"]
+[ext_resource type="Script" uid="uid://clyi8hau6lqct" path="res://Nonactives/Data/Generx/Classes/QuadrantRegion.gd" id="4_75gse"]
+[ext_resource type="Script" uid="uid://dfamx0sugtexp" path="res://Dynamo (Actives)/Unsorted/Quadrant.gd" id="5_aa4nr"]
+[ext_resource type="Script" uid="uid://ff8ikg0040wl" path="res://Dynamo (Actives)/Unsorted/QuadrantB.gd" id="6_0842t"]
+[ext_resource type="Script" uid="uid://dgojcycyei87w" path="res://Dynamo (Actives)/Unsorted/QuadrantC.gd" id="7_7j0lk"]
+[ext_resource type="Script" uid="uid://fgy5ragu4bml" path="res://Dynamo (Actives)/Unsorted/QuadrantD.gd" id="8_fqy0c"]
+[ext_resource type="Script" uid="uid://xjiyca3qeo4r" path="res://Dynamo (Actives)/Player/Controller.gd" id="9_phynb"]
 [ext_resource type="Resource" uid="uid://bcu0ej1m4befk" path="res://Nonactives/Data/Resorz/Primrose.tres" id="10_oy3n3"]
 [ext_resource type="Texture2D" uid="uid://b0k3g8oj8rsac" path="res://Visual/Kinematx/1k/TestAnim/0.png" id="11_d0mxj"]
 [ext_resource type="Texture2D" uid="uid://djhbyy8rjry77" path="res://Visual/Kinematx/1k/TestAnim/1.png" id="12_3g3qg"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://dexwnqfc2sbgq" path="res://Visual/Kinematx/1k/TestAnim/4.png" id="15_u5fnu"]
 [ext_resource type="Texture2D" uid="uid://cpiqn25dhdrnj" path="res://Visual/Kinematx/1k/TestAnim/5.png" id="16_1lchg"]
 [ext_resource type="Texture2D" uid="uid://dfumupceolrq" path="res://Visual/Kinematx/1k/TestAnim/6.png" id="17_a8ciu"]
-[ext_resource type="Script" uid="uid://b0arcwegmrspe" path="res://Nonactives/Objex/LevL/primrose.gd" id="17_vwaaq"]
 
 [sub_resource type="Resource" id="Resource_xuhf1"]
 script = ExtResource("4_75gse")
@@ -181,4 +180,3 @@ double_sided = false
 texture_filter = 4
 sprite_frames = SubResource("SpriteFrames_guwbt")
 animation = &"walk"
-script = ExtResource("17_vwaaq")
